@@ -1,0 +1,16 @@
+apiVersion: skaffold/v2beta5
+kind: Config
+metadata:
+  name: goalz
+build:
+  local:
+    push: false
+  artifacts:
+  - image: aziddouch/gateway
+    context: gateway
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+    - infra/k8s/*

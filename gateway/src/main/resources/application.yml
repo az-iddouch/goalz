@@ -3,3 +3,4 @@ spring:
     name: gateway
 server:
   port: 8080
+
