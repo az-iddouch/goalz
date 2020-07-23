@@ -10,12 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class GatewayApplication {
 
 	public static void main(String[] args) {
-		System.out.println("gateway running in port 8080 ....");
 		SpringApplication.run(GatewayApplication.class, args);
 	}
 
 
-	@GetMapping("/ping")
+	@GetMapping("/api/ping")
 	String ping() {
 		return "pong";
 	}
